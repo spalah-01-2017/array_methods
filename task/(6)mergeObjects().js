@@ -2,15 +2,13 @@ var obj1 = { a: 10, b: 20, c: 30 };
 var obj2 = { q: 8, b: 7, c: 6 };
 
 
-function mergeObjects(o1,o2) {
-	var obj = {};
-	for (var key in o1) {
-		obj[key] = o1[key];
+function mergeObjects() {
+	var newObj = {};
+	for(var obj in arguments) {
+		for(var key in arguments[obj]) {
+			newObj[key] = arguments[obj][key];
+		}
 	}
-	for (var key in o2) {
-		obj[key] = o2[key];
-	}
-	return obj;
+	return newObj;
 }
-
 mergeObjects(obj1,obj2);
