@@ -2,7 +2,7 @@ function copyObj (obj) {
 	var keys = Object.keys(obj);
 	var newObj = {};
 
-	keys.forEach(function (el, i) {
+	keys.forEach(function (el) {
 		newObj[el] = obj[el];
 	});
 
@@ -18,7 +18,7 @@ function copyObj2 (obj) {
 }
 
 var a = {a: 1, b: 2};
-var b = copyObj2(a);
+var b = copyObj(a);
 
 b.c = 3;
 
