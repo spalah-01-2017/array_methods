@@ -8,6 +8,15 @@ function copyObj(obj) {
 	return object;
 };
 
+function copyObj2(obj) {
+	var keys = [];
+	keys = Object.keys(obj);
+	return keys.reduce(function(prev, cur) {
+		prev[cur] = obj[cur];
+		return prev;
+	}, {});
+};
+
 var o1 = {'a': 1};
 var o2 = copyObj(o1);
 console.log(o2);
