@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>reverse</title>
+</head>
+<body>
+
+<p>
+    Реализуйте функцию reverse, используя map. Функция должна возвращать новый массив.
+</p>
+
+<script>
+    var myarr = [3, 5, 2, 8];
+
+    function reverse(arr){
+        return arr.map(function(el, i, arr){
+            return arr[arr.length -1 - i];
+        });
+    }
+
+    console.log(reverse(myarr));
+
+</script>
+
+</body>
+</html>

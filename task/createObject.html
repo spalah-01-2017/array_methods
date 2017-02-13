@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>createObject</title>
+</head>
+<body>
+<p>
+    Функция принимает два массива и возвращает объект с именами свойств, соответсвующими элементам первого массива и
+    значениями, соответсвующими элементам второго массива. Пример:<br><br>
+
+    createObject(['name', 'mark'], ['John', 7]); //{'name': 'John', 'mark': 7}<br>
+
+    function createObject(arrOfKeys, arrOfValues) {<br>
+    <br>
+    }<br>
+
+<script>
+    var res = createObject(['name', 'mark'], ['John', 7]);
+    console.log(res);
+
+    function createObject(arrOfKeys, arrOfValues){
+        return arrOfKeys.reduce(function(obj, el, i){
+            obj[el] = arrOfValues[i];
+            return obj;
+        }, {});
+    }
+</script>
+
+</body>
+</html>

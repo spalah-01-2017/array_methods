@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>arrayToObject</title>
+</head>
+<body>
+
+<p>
+    Функция, принимающая в качестве аргумента многомерный массив и возвращающая объект, содержащий информацию из
+    этого массива.<br><br>
+
+    var arrOfData = [['name', 'Mark'],<br>
+    ['single', false],<br>
+    ['language', 'PHP'],<br>
+    ['children', 0],<br>
+    ['company', 'Facebook']];<br><br>
+
+    arrayToObject(arrOfData);<br><br>
+
+    // {<br>
+    //     'name': 'Mark',<br>
+    //     'single': false,<br>
+    //     'language': 'PHP',<br>
+    //     'children': 0,<br>
+    //     'company': 'Facebook'<br>
+    // }<br><br>
+
+    function arrayToObject(arr) {<br><br>
+
+    }<br>
+</p>
+
+<script>
+
+    var arrOfData = [['name', 'Mark'],
+        ['single', false],
+        ['language', 'PHP'],
+        ['children', 0],
+        ['company', 'Facebook']];
+
+    console.log(arrayToObject(arrOfData));
+
+    function arrayToObject(arr) {
+        return arr.reduce(function(obj, el){
+            obj[el[0]] = el[1];
+            return obj;
+        }, {});
+    }
+</script>
+
+</body>
+</html>

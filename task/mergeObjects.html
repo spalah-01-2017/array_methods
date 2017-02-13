@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mergeObjects</title>
+</head>
+<body>
+
+<p>
+    Функция, принимающая в качестве аргументов два объекта и возвращающая новый объект со всеми свойствами первого
+    объекта плюс свойствами второго объекта. Если имена свойств двух объектов совпапдают, значение соответсвующего
+    свойства возвращаемого объекта должно быть равным значению свойства второго объекта.<br><br>
+
+    Пример:<br><br>
+
+    var obj1 = { a: 10, b: 20, c: 30 };<br>
+    var obj2 = { q: 8, b: 7, c: 6 };<br><br>
+
+    mergeObjects(obj1,obj2);<br>
+    // {<br>
+    //     a: 10,<br>
+    //     b: 7,<br>
+    //     c: 6,<br>
+    //     q: 8<br>
+    // }<br><br>
+
+    function mergeObjects(o1,o2) {<br><br>
+
+    }<br>
+</p>
+
+<script>
+
+    var obj1 = { a: 10, b: 20, c: 30 };
+    var obj2 = { q: 8, b: 7, c: 6 };
+
+    console.log(mergeObjects(obj1,obj2));
+
+    function mergeObjects(o1,o2) {
+        var obj = {};
+        for (var i = 0; i < arguments.length; i++){
+            for (key in arguments[i]){
+                obj[key] = arguments[i][key];
+            }
+        }
+        return obj;
+    }
+</script>
+
+</body>
+</html>

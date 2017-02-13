@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sortByMark-sortByName</title>
+</head>
+<body>
+
+<p>
+    Первая функция, принимающая в качестве аргумента массив объектов, представляющих студентов, и возвращающая этот
+    же массив, отсортированный по оценке студента в убывающем порядке. Вторая функция, возаращающая отсортированный
+    массив, но по имени в алфавитном порядке.<br><br>
+
+    Пример:<br><br>
+
+    var students = [{ name: 'Taras', mark: 4 },<br>
+    { name: 'anna', mark: 9 },<br>
+    { name: 'Pavlo', mark: 6 },<br>
+    { name: 'Mila', mark: 10 }];<br><br>
+
+    sortByMark(students);<br>
+    // [{ name: 'Mila', mark: 10 },<br>
+    // { name: 'anna', mark: 9 },<br>
+    // { name: 'Pavlo', mark: 6 },<br>
+    // { name: 'Taras', mark: 4 }];<br><br>
+
+    sortByName(students);<br>
+    // [{ name: 'anna', mark: 9 },<br>
+    // { name: 'Mila', mark: 10 },<br>
+    // { name: 'Pavlo', mark: 6 },<br>
+    // { name: 'Taras', mark: 4 }];<br><br>
+
+    function sortByMark(arr) {<br><br>
+
+    }<br><br>
+
+    function sortByName(arr) {<br><br>
+
+    }<br>
+</p>
+
+<script>
+
+    var students = [{ name: 'Taras', mark: 4 },
+        { name: 'anna', mark: 9 },
+    { name: 'Pavlo', mark: 6 },
+    { name: 'Mila', mark: 10 }];
+
+    console.log(sortByName(students));
+
+    function sortByMark(arr) {
+        arr.sort(function (a, b) {
+            return a.mark < b.mark;
+        });
+        return arr;
+    }
+
+    function sortByName(arr) {
+        arr.sort(function (a, b) {
+            return a.name.toLowerCase() > b.name.toLowerCase();
+        });
+        return arr;
+    }
+
+</script>
+
+</body>
+</html>

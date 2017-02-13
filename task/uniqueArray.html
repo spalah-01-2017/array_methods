@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>uniqueArray</title>
+</head>
+<body>
+
+<p>
+    Функция, принимающая в качестве аргумента массив и возвращающая новый массив с уникальными элементами из первого.
+    <br><br>
+    Пример:<br><br>
+
+    var arr = [3, 5, 'mozilla', 'JavaScript', 'mozilla', 4, 5];<br>
+    uniqueArray(arr); //[3, 5, 'mozilla', 'JavaScript', 4]<br><br>
+
+    function uniqueArray(arr) {<br><br>
+
+    }
+</p>
+
+<script>
+    var arr = [3, 5, 'mozilla', 'JavaScript', 'mozilla', 4, 5];
+
+    console.log(uniqueArray(arr));
+
+    function uniqueArray(arr) {
+        var newArr = [];
+        arr.forEach(function (el, i) {
+            if(newArr.indexOf(el) == -1){
+                newArr.push(el);
+            }
+        });
+        return newArr;
+    }
+</script>
+
+</body>
+</html>

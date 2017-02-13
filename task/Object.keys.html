@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object.keys</title>
+</head>
+<body>
+
+<p>
+    Функция, принимающая в качествре аргумента объект и возвращающая новый объект - копию объекта, переданного функции.
+    Вместо конструкции for in используйте статический метод
+    Object.keys(https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/keys).
+    Сделайте две реализации: первая - с использованием метода forEach, вторая - с использованием метода reduce Пример:
+    <br><br>
+    var o1 = { a: 5 };<br>
+    var o2 = copyObj(o1); o2; //{a: 5}<br>
+</p>
+
+<script>
+
+    var o1 = { a: 5 };
+    var o2 = copyObjReduce(o1); //{a: 5}
+
+    console.log(o2);
+    
+    function copyObjforEach(arr) {
+        var newObj = {};
+        var arrKeys = Object.keys(arr);
+        arrKeys.forEach(function(el){
+            newObj[el] = arr[el];
+        });
+        return newObj;
+    }
+
+    function copyObjReduce(arr) {
+        var arrKeys = Object.keys(arr);
+        var newObj = arrKeys.reduce(function (obj, el) {
+            obj[el] = arr[el];
+            return obj;
+        }, {});
+        return newObj;
+    }
+
+</script>
+
+</body>
+</html>
